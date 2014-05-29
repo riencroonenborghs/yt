@@ -1,0 +1,20 @@
+<%= render 'form' %>
+
+<br />
+
+<%= bootstrap_row_and_grid do %>
+  <%= bootstrap_panel do %>
+    <%= bootstrap_table do %>
+      <tbody>
+        <tr><td colspan=3><%= @video_info['url_encoded_fmt_stream_map'].collect(&:keys).flatten.uniq %></td></tr>
+        <% @video_info['url_encoded_fmt_stream_map'].each do |hash| %>
+          <tr>
+            <td><%= link_to 'dl', hash['url'] %> <%= '3D' if hash.keys.include?('stereo3d') %></td>
+            <td><%= hash['quality'] %> (<%= hash['type'] %>)</td>
+            <td><%= hash['url'].first(75) + '...' %></td>
+          </tr>
+        <% end %>        
+      </tbody>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+<%= bootstrap_row_and_grid do %>
+  <%= simple_form_for :video, url: download_videos_path do |f| %>
+    <%= f.input :url, label: 'YouTube URL', placeholder: 'https://www.youtube.com/watch?v=nareTnpxvTQ', wrapper_html: {class: "form-group"}, input_html: {class: 'form-control form-control-large'} %>
+    <%= save_button 'Download' %>
+  <% end %>
+<% end %>
