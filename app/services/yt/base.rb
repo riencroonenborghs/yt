@@ -8,7 +8,6 @@ module Yt
 
       def video_info(url)
         parse(get_video_info(get_video_id(url)))
-        # parse_video_info_ext(get_video_info(get_video_id(url)))
       end
 
       def video_info_ext(url)
@@ -30,6 +29,7 @@ module Yt
 
       def parse(s)
         h = Hash.new { |hash, key| hash[key] = [] }
+        
         s = s.split(/&/)
         s = s.map{|x| x =~ /%/ ? URI.unescape(x) : x  }
         s = s.map{|x| list = x.split(/\=/) 

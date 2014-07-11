@@ -21,19 +21,19 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="<%= body_classes %>">
+  <body class="<%= bb_body_classes %>">
 
     <%= render "/layouts/menu" %>
 
-    <div class="container">
+    <div class="container main">
       <%= render '/layouts/flash', flash: flash %>
 
       <%= yield %>
-
-      <%= bootstrap_row_and_grid(class: 'footer') do %>
-        &copy; 2014-<%= Date.today.year %> Rien Croonenborghs - version <%= File.read(Rails.root.join('BRANCH')) rescue "unknown" %>  
-      <% end %>
     </div>
+
+    <%= bb_row_and_grid(class: 'footer') do %>
+      &copy; 2014-<%= Date.today.year %> Rien Croonenborghs - version <%= File.read(Rails.root.join('BRANCH')) rescue "unknown" %>  
+    <% end %>
 
     
   </body>

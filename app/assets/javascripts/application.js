@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery.ui.datepicker
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap_builder
+//= require yt
+//= require footer

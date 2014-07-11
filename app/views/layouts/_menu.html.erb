@@ -13,17 +13,17 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         
-        <% if user_signed_in? %>
+        <%# if user_signed_in? %>
            
-        <% end %>
+        <%# end %>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to logout_icon + " Log out".html_safe, destroy_user_session_path, method: :delete %></li>                  
-        <% else %>
-          <li><%= link_to "Log in", new_user_session_path %></li>
-        <% end %>
+        <%# if user_signed_in? %>
+          <!-- <li><%#= link_to log_out_icon + " Log out".html_safe, destroy_user_session_path, method: :delete %></li>                   -->
+        <%# else %>
+          <!-- <li><%#= link_to log_in_icon + "Log in", new_user_session_path %></li> -->
+        <%# end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
