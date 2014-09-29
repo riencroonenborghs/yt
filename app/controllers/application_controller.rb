@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper BootstrapBuilder::Engine.helpers  
+  helper Bootstrapped::Engine.helpers  
 
-  # before_filter :authenticate_user!
+  before_filter :authenticate_user!
 end

@@ -11,8 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery.ui.datepicker
 //= require jquery_ujs
-//= require bootstrap_builder
 //= require yt
 //= require footer

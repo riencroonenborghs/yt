@@ -1,0 +1,22 @@
+=render 'form', query: params[:video][:url]
+
+%br
+
+-if @info.streams.empty?
+  %p
+    No streams found
+-else
+  =row_and_grid do
+    =panel do
+      =panel_heading do
+        =@info.title
+      =table do
+        %tbody
+          -@info.streams.each do |stream|
+            %tr
+              %td
+                =link_to download_alt_icon + " Download #{stream.width}x#{stream.height} #{stream.codec}", stream.url
+                ='3D' if stream.is3d
+              %td
+                .truncate
+                  =stream.url

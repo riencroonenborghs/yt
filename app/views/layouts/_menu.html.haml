@@ -1,0 +1,13 @@
+<!-- Fixed navbar -->
+.navbar.navbar-default.navbar-fixed-top.menu.navbar-inverse{role: "navigation"}
+  .container
+    .navbar-header
+      =link_to "Yt Streams", root_path, class: "navbar-brand"
+    .navbar-collapse.collapse      
+      %ul.nav.navbar-nav.navbar-right
+        -if user_signed_in?
+          %li
+            =link_to log_out_icon + " Log out".html_safe, destroy_user_session_path, method: :delete
+        -else
+          %li
+            =link_to log_in_icon + " Log in".html_safe, new_user_session_path

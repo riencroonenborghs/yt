@@ -6,13 +6,16 @@ gem 'devise'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'bootstrap-sass'
-gem 'bootstrap-wysihtml5-rails', '0.3.1.24'
-gem 'bootstrap_builder', git: "https://github.com/riencroonenborghs/bootstrap_builder.git"
-gem 'kaminari-bootstrap'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'bootstrapped', github: 'riencroonenborghs/bootstrapped'
+gem 'yt_streams', github: 'riencroonenborghs/yt_streams'
+
 gem 'better_errors'
 gem 'simple_form'
 gem 'unicorn'
+gem 'haml'
 
 group :development, :test do
   gem 'rspec-rails'
